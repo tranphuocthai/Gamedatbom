@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game đặt mìn [Team RefugeeX4]</title>
+    
+    <link rel="icon" type="image/png" href="assets/hinhAnh/hieuUng/bom.png">
+
+    <meta property="og:title" content="Game đặt mìn [Team RefugeeX4]">
+    
+    <meta property="og:description" content="Dự án game đặt mìn cổ điển được lập trình bằng HTML, CSS và JavaScript. Hãy thử sức và tiêu diệt hết quái vật nào!">
+    
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="https://tranphuocthai.github.io/Gamedatmin.com/nen-menu.png">
+
+    <meta property="og:url" content="https://tranphuocthai.github.io/Gamedatmin.com/">
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+
+        <div id="man-hinh-menu" class="man-hinh">
+            <h1>Bom Game</h1>
+            <div class="form-nhap-ten">
+                <label for="ten-nguoi-choi">Tên của bạn:</label>
+                <input type="text" id="ten-nguoi-choi" placeholder="Player 1" value="Player 1">
+            </div>
+            <div class="khu-vuc-chon-skin">
+                <h3>Chọn Skin</h3>
+                <div class="danh-sach-skin">
+                    <div class="skin-option active" data-skin="skin-1" style="background-image: url('assets/hinhAnh/nhanVat/skin-1/dung-yen.png');"></div>
+                    <div class="skin-option" data-skin="skin-2" style="background-image: url('assets/hinhAnh/nhanVat/skin-2/dung-yen.png');"></div>
+                </div>
+            </div>
+            <button id="nut-bat-dau">Bắt đầu</button>
+        </div>
+
+        <div id="man-hinh-game" class="man-hinh hidden">
+            <div id="giao-dien-game">
+                <div id="ui-hp" class="ui-stat">
+                    <img src="assets/hinhAnh/ui/icon-tim.png" alt="HP">
+                    <span id="so-hp">x 3</span>
+                </div>
+                <div id="ui-ten-nguoi-choi" class="ui-stat">Player 1</div>
+                <div id="ui-bom" class="ui-stat">
+                    <img src="assets/hinhAnh/hieuUng/bom.png" alt="Bom">
+                    <span id="so-bom">x 2</span>
+                </div>
+                <div id="nut-icon-cai-dat">
+                    <img src="assets/hinhAnh/ui/icon-cai-dat.png" alt="Cài đặt">
+                </div>
+            </div>
+            <div id="ban-do-game">
+                </div>
+        </div>
+
+        <div id="man-hinh-ket-thuc" class="man-hinh hidden">
+            <h2 id="thong-bao-ket-thuc">Bạn đã thắng!</h2>
+            <button id="nut-choi-lai">Chơi lại</button>
+        </div>
+
+        <div id="man-hinh-cai-dat" class="hidden">
+            <div class="menu-cai-dat-noi">
+                <h2>Cài đặt</h2>
+                <div class="thanh-am-luong">
+                    <label for="am-luong-nhac">Nhạc nền:</label>
+                    <input type="range" id="am-luong-nhac" min="0" max="100" value="80">
+                </div>
+                <div class="thanh-am-luong">
+                    <label for="am-luong-hieu-ung">Hiệu ứng (SFX):</label>
+                    <input type="range" id="am-luong-hieu-ung" min="0" max="100" value="100">
+                </div>
+                <div class="nhom-nut-cai-dat">
+                    <button id="nut-tiep-tuc">Tiếp tục</button>
+                    <button id="nut-choi-lai-settings">Chơi lại</button>
+                    <button id="nut-thoat-menu">Về Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/AmThanh.js"></script>
+    <script src="js/CaiDat.js"></script>
+    <script src="js/doiTuong/Map.js"></script>
+    <script src="js/doiTuong/NguoiChoi.js"></script>
+    <script src="js/doiTuong/QuaiVat.js"></script>
+    <script src="js/doiTuong/Bom.js"></script>
+    <script src="js/doiTuong/VuNo.js"></script>
+    <script src="js/doiTuong/VatPham.js"></script>
+    <script src="js/main.js"></script> 
+</body>
+</html>
